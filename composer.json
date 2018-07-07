@@ -1,5 +1,5 @@
 {
-    "name": "cocur/background-process",
+    "name": "nhahv/background-process",
     "description": "Start processes in the background that continue running when the PHP process exists.",
     "type": "library",
     "keywords": ["process", "background", "unix"],
