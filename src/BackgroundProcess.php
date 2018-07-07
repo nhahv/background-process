@@ -71,7 +71,7 @@ class BackgroundProcess
                 shell_exec(sprintf('%s &', $this->command, $outputFile));
                 break;
             case self::OS_NIX:
-                $this->pid = (int)shell_exec(sprintf('%s %s %s 2>&1 & echo $!', $this->command, ($append) ? '>>' : '>', $outputFile));
+                $this->pid = (int)exec(sprintf('%s %s %s 2>&1 & echo $!', $this->command, ($append) ? '>>' : '>', $outputFile));
                 break;
             default:
                 throw new RuntimeException(sprintf(
